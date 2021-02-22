@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAF-8E-61d">
+                                <rect key="frame" x="120" y="190" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.53035497669999998" green="0.060427479450000002" blue="0.044213160869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HAp-rm-ryK"/>
+                                    <constraint firstAttribute="width" constant="100" id="xfZ-13-lUA"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Alpha"/>
+                                <connections>
+                                    <action selector="alphaPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfo-wn-rL7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2E-Z6-PLc">
+                                <rect key="frame" x="120" y="238" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.53035497669999998" green="0.060427479450000002" blue="0.044213160869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SDt-1V-5Et"/>
+                                    <constraint firstAttribute="width" constant="100" id="vTJ-Rs-T8V"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Pulse"/>
+                                <connections>
+                                    <action selector="pulsePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F8t-6l-kMD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b46-Pk-Tum">
+                                <rect key="frame" x="120" y="285" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.53035497669999998" green="0.060427479450000002" blue="0.044213160869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WFe-oI-bsx"/>
+                                    <constraint firstAttribute="height" constant="30" id="XQt-1f-kwn"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Color Change"/>
+                                <connections>
+                                    <action selector="colorChangePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIi-AS-Iu5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdY-yd-4u5">
+                                <rect key="frame" x="120" y="143" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.53035497669999998" green="0.060427479450000002" blue="0.044213160869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EDo-da-3XV"/>
+                                    <constraint firstAttribute="width" constant="100" id="ngg-Fk-VXQ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Move"/>
+                                <connections>
+                                    <action selector="movePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAp-GY-3ad"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clown" translatesAutoresizingMaskIntoConstraints="NO" id="5Sp-Ea-PuZ">
+                                <rect key="frame" x="120" y="0.0" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="gMV-ZC-yEg"/>
+                                    <constraint firstAttribute="height" constant="100" id="jTG-ax-b9a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kdY-yd-4u5" firstAttribute="top" secondItem="5Sp-Ea-PuZ" secondAttribute="bottom" constant="43" id="0UL-64-kSK"/>
+                            <constraint firstItem="b46-Pk-Tum" firstAttribute="top" secondItem="x2E-Z6-PLc" secondAttribute="bottom" constant="17" id="3bu-US-5t2"/>
+                            <constraint firstItem="5Sp-Ea-PuZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mc7-dR-H3M"/>
+                            <constraint firstItem="x2E-Z6-PLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R9X-et-Bge"/>
+                            <constraint firstItem="b46-Pk-Tum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VcY-Np-0Qu"/>
+                            <constraint firstItem="x2E-Z6-PLc" firstAttribute="top" secondItem="UAF-8E-61d" secondAttribute="bottom" constant="18" id="cGX-1g-6tP"/>
+                            <constraint firstItem="UAF-8E-61d" firstAttribute="top" secondItem="kdY-yd-4u5" secondAttribute="bottom" constant="17" id="nbL-XH-Drc"/>
+                            <constraint firstItem="5Sp-Ea-PuZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="saB-UT-qMo"/>
+                            <constraint firstItem="kdY-yd-4u5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tKn-8f-ngj"/>
+                            <constraint firstItem="UAF-8E-61d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xp2-vk-ct3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alphaButton" destination="UAF-8E-61d" id="q1u-y3-fZE"/>
+                        <outlet property="colorChangeButton" destination="b46-Pk-Tum" id="Asr-IW-j8V"/>
+                        <outlet property="imageView" destination="5Sp-Ea-PuZ" id="Qdf-RH-Nj0"/>
+                        <outlet property="moveButton" destination="kdY-yd-4u5" id="swt-fx-Lkb"/>
+                        <outlet property="pulseButton" destination="x2E-Z6-PLc" id="nkm-eV-TGz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clown" width="1786" height="1779"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
